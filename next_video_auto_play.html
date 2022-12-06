@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------<title> Website Layout | CodingLab</title>------>
+    <link rel="stylesheet" href="new_video_auto_play.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   </head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">HTML</a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+       
+      </ul>
+    </div>
+  </nav>
+
+  <video id="homevideo" autoplay="" controls webkit-playsinline="" width="50%" height="50%" style="top: 30%;
+  position: absolute;
+  left: 25%;" >
+    <source src="C:\\Users\\chavarah\\Desktop\\Python\\Dajngo-REST-API\\video2\\video1.webm" type="video/mp4">
+</video>
+
+
+<script>
+    var videocount =1;
+  var player=document.getElementById('homevideo');
+    player.addEventListener('ended',dispositor);
+    function dispositor(x){
+    if(!x) 
+    { x = window.event; }
+  videocount++;      
+  if (videocount > 2){ // last number of video playing in loop. 
+  videocount = 1;}    
+  player.src="C:\\Users\\chavarah\\Desktop\\Python\\Dajngo-REST-API\\video2\\video"+videocount+".webm"; //complete url
+}
+</script>
+</body>
+</html>
